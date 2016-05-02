@@ -9,7 +9,7 @@ Release:		%{build_release}%{?dist}
 Summary:		Internationalization library
 License:        BSD
 Group:          Development/Libraries
-URL:			http://www.intel.com
+URL:			https://01.org/intel-nvm-i18n-library
 Source:         %{rpm_name}.tar.bz2
 
 %define  debug_package %{nil}
