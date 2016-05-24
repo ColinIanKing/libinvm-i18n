@@ -10,7 +10,7 @@ Summary:        Internationalization library
 License:        BSD
 Group:          Development/Libraries
 URL:            https://01.org/intel-nvm-i18n-library
-Source:         https://github.com/01org/intelnvmi8nlibrary/archive/v%{version}.tar.gz
+Source:         https://github.com/01org/intelnvm1i8nlibrary/archive/v%{version}.tar.gz
 
 %define  debug_package %{nil}
 
