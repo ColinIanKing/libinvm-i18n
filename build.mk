@@ -57,7 +57,7 @@ BLDMK_SLASH = /
 BLDMK_SPACE = $(BLDMK_EMPTY) $(BLDMK_EMPTY)
 
 ifndef BUILDNUM
-	BUILDNUM= $(shell git describe --abbrev=0 | sed -e 's/\(.*_\)\(.*\)/\2/g')
+	BUILDNUM= $(shell git describe --abbrev=0 | sed -e 's/\([a-zA-Z_-]*\)\(.*\)/\2/g')
 	ifeq ($(strip $(BUILDNUM)),)
 		BUILDNUM=99.99.99.9999
 	endif

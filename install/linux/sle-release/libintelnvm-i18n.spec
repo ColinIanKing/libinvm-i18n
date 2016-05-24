@@ -4,13 +4,13 @@
 %define dname %{rpm_name}-devel
 
 Name:           %{rpm_name}
-Version:		%{build_version}
-Release:		%{build_release}%{?dist}
-Summary:		Internationalization library
+Version:        %{build_version}
+Release:        %{build_release}%{?dist}
+Summary:        Internationalization library
 License:        BSD
 Group:          Development/Libraries
-URL:			https://01.org/intel-nvm-i18n-library
-Source:         %{rpm_name}.tar.bz2
+URL:            https://01.org/intel-nvm-i18n-library
+Source:         https://github.com/01org/intelnvmi8nlibrary/archive/v%{version}.tar.gz
 
 %define  debug_package %{nil}
 
