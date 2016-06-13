@@ -1,34 +1,29 @@
-%define rpm_name libintelnvm-i18n
 %define build_version 99.99.99.9999
-%define build_release 1
-%define dname %{rpm_name}-devel
 
-Name:           %{rpm_name}
+Name:           libinvm-i18n
 Version:        %{build_version}
-Release:        %{build_release}%{?dist}
+Release:        1%{?dist}
 Summary:        Internationalization library
 License:        BSD
 Group:          Development/Libraries
 URL:            https://01.org/intel-nvm-i18n-library
-Source:         https://github.com/01org/intelnvmi18nlibrary/archive/v%{version}.tar.gz
-
-%define  debug_package %{nil}
+Source:         https://github.com/01org/intelnvmi18nlibrary/archive/v%{version}.tar.gz#/%{name}-%{version}.tar.gz
 
 %description
 Internationalization library
 
-%package -n %dname
+%package -n %{name}-devel
 Summary:        Development files for %{name}
 License:        BSD
 Group:          Development/Libraries
 Requires:       %{name}%{?_isa} = %{version}-%{release}
 
-%description -n %dname
+%description -n %{name}-devel
 The %{name}-devel package contains header files for
 developing applications that use %{name}.
 
 %prep
-%setup -q -n %{rpm_name}
+%setup -q -n %{name}-%{version}
 
 %build
 make BUILDNUM=%{build_version} RELEASE=1
@@ -41,15 +36,15 @@ make install RELEASE=1 RPM_ROOT=%{buildroot} LIB_DIR=%{_libdir} INCLUDE_DIR=%{_i
 %postun -p /sbin/ldconfig
 
 %files
-%attr(755,root,root) %{_libdir}/libintelnvm-i18n.so.*
+%attr(755,root,root) %{_libdir}/libinvm-i18n.so.*
 %license licenses/intel_bsd
 
-%files -n %dname
-%attr(755,root,root) %{_libdir}/libintelnvm-i18n.so
-%attr(755,root,root) %dir %{_includedir}/libintelnvm-i18n
-%attr(644,root,root) %{_includedir}/libintelnvm-i18n/*.h
+%files -n %{name}-devel
+%attr(755,root,root) %{_libdir}/libinvm-i18n.so
+%attr(755,root,root) %dir %{_includedir}/libinvm-i18n
+%attr(644,root,root) %{_includedir}/libinvm-i18n/*.h
 %license licenses/intel_bsd
 
 %changelog
-* Thu Mar 24 2016 richard.a.johnson@intel.com
+* Thu Mar 24 2016 Richard Johnson <richard.a.johnson@intel.com> - 1.0.0.1014-1
 - Initial rpm release

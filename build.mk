@@ -77,9 +77,9 @@ C_CPP_FLAGS_SRC = -MMD -D__VERSION_MAJOR__=$(VERSION_MAJOR) -D__VERSION_MINOR__=
 CFLAGS_CMN = -std=c99
 CPPFLAGS_CMN =
 
-LIB_BASENAME=libintelnvm-i18n
-LIB_NAME=intelnvm-i18n
-HEADER_DIRECTORY=libintelnvm-i18n
+LIB_BASENAME=libinvm-i18n
+LIB_NAME=invm-i18n
+HEADER_DIRECTORY=libinvm-i18n
 
 # OS specific settings
 UNAME := $(shell uname)
