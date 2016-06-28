@@ -10,7 +10,9 @@ URL:            https://01.org/intel-nvm-i18n-library
 Source:         https://github.com/01org/intelnvmi18nlibrary/archive/v%{version}.tar.gz#/%{name}-%{version}.tar.gz
 
 %description
-Internationalization library
+Framework library for Internationalization, supporting a subset of
+Internationalization(I18n) functionality. This is a required library
+for using libinvm-cli library.
 
 %package -n %{name}-devel
 Summary:        Development files for %{name}
@@ -26,7 +28,7 @@ developing applications that use %{name}.
 %setup -q -n %{name}-%{version}
 
 %build
-make BUILDNUM=%{build_version} RELEASE=1
+make BUILDNUM=%{build_version} RELEASE=1 CFLAGS_EXTERNAL="%{?optflags}" %{?_smp_mflags}
 
 %install
 make install RELEASE=1 RPM_ROOT=%{buildroot} LIB_DIR=%{_libdir} INCLUDE_DIR=%{_includedir}
