@@ -51,5 +51,5 @@ make install RELEASE=1 RPM_ROOT=%{buildroot} LIB_DIR=%{_libdir} INCLUDE_DIR=%{_i
 %license licenses/netbsd
 
 %changelog
-* Thu Mar 24 2016 Richard Johnson <richard.a.johnson@intel.com> - 1.0.0.1014-1
+* Thu Mar 24 2016 Richard Johnson <richard.a.johnson@intel.com> - 1.0.0.1015-1
 - Initial rpm release
