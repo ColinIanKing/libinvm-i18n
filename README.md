@@ -1,7 +1,7 @@
-#INTELNVMI18NLIBRARY
+#libinvm-i18n
 
-Intel NVM I18N Library is an internationalization library supporting a subset
-of internationalization functionality. 
+libinvm-i18n is a framework library for Internationalization, supporting a subset
+of Internationalization (I18n) functionality. 
 
 GNU Make is used to build for Linux and Windows.
 As such we recommend mingw_w64 and msys be used to build in a windows

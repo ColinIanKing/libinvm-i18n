@@ -7,11 +7,11 @@ Summary:        Internationalization library
 License:        BSD
 Group:          Development/Libraries
 URL:            https://01.org/intel-nvm-i18n-library
-Source:         https://github.com/01org/intelnvmi18nlibrary/archive/v%{version}.tar.gz#/%{name}-%{version}.tar.gz
+Source:         https://github.com/01org/libinvm-i18n/archive/v%{version}.tar.gz#/%{name}-%{version}.tar.gz
 
 %description
 Framework library for Internationalization, supporting a subset of
-Internationalization(I18n) functionality. This is a required library
+Internationalization (I18n) functionality. This is a required library
 for using libinvm-cli library.
 
 %package -n %{name}-devel
@@ -51,5 +51,5 @@ make install RELEASE=1 RPM_ROOT=%{buildroot} LIB_DIR=%{_libdir} INCLUDE_DIR=%{_i
 %license licenses/netbsd
 
 %changelog
-* Thu Mar 24 2016 Richard Johnson <richard.a.johnson@intel.com> - 1.0.0.1015-1
+* Thu Mar 24 2016 Richard Johnson <richard.a.johnson@intel.com> - 1.0.0.1016-1
 - Initial rpm release
