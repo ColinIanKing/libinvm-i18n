@@ -82,7 +82,14 @@ uninstall :
 	$(RM) $(LIB_FILES)
 	$(RMDIR) $(I18N_INCLUDE_DIR)
 
-rpm :
+gitcheck :
+ifeq ($(DIR_IS_NOT_GIT_REPO),"true")
+	git init
+	git add .
+	git commit -a -m "Initial commit"
+endif
+
+rpm : gitcheck
 	#Make the Directories
 	$(MKDIR) $(RPMBUILD_DIR) $(RPMBUILD_DIR)/BUILD $(RPMBUILD_DIR)/SOURCES $(RPMBUILD_DIR)/RPMS $(RPMBUILD_DIR)/SRPMS $(RPMBUILD_DIR)/SPECS $(RPMBUILD_DIR)/BUILDROOT $(RPMBUILD_DIR)/BUILD/$(HEADER_DIRECTORY)-$(BUILDNUM)
 	$(RMDIR) $(RPMBUILD_DIR)/BUILD/$(HEADER_DIRECTORY)-$(BUILDNUM)

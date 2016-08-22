@@ -135,6 +135,13 @@ ifeq ($(UNAME), Linux)
 		else
 			LINUX_DIST := $(warning Unrecognized Linux distribution)
 		endif
+
+		ifeq ("$(wildcard .git)","")
+                        DIR_IS_NOT_GIT_REPO := "true"
+                else
+                        DIR_IS_NOT_GIT_REPO := "false"
+                endif
+
 	endif		
 else
 	BUILD_WINDOWS = 1
