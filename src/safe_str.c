@@ -168,7 +168,6 @@ int safe_strncmp(const char *const str1, const char *const str2, size_t maxlen)
 
 	if (str1 && str2 && (maxlen != 0))
 	{
-		ret = 1;
 		size_t idx = 0;
 
 		size_t str1size = safe_strnlen(str1, maxlen);
